@@ -79,6 +79,14 @@ export default function DiningTableQuestionnaire() {
   const update = <K extends keyof FormState>(key: K, value: FormState[K]) =>
     setForm((prev) => ({ ...prev, [key]: value }));
 
+  /* ---------- 提交表单 ---------- */
+  const submit = () => {
+    // TODO: 替换为真实 API 调用
+    // eslint-disable-next-line no-console
+    console.log("表单数据:", form);
+    alert("已提交！数据已打印到控制台。");
+  };
+
   /* ---------- 单步内容组件 ---------- */
   const StepContent = () => {
     switch (step) {
